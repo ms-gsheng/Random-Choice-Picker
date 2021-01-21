@@ -16,6 +16,19 @@ textarea.addEventListener('keyup', (e) => {
 })
 
 function createTags(input) {
+
+    // //'test,test , ,' = ['test', 'test ', '']
+    // let tags = input.split(',');
+    // //['test', 'test ']
+    // tags = tags.filter(function(tag) {
+    //     tag.trim()!== ''
+    //     return tag.trim()
+    // });
+    // //['test', 'test']
+    // tags = tags.map(function(tag){
+    //     return tag.trim()
+    // })
+
     const tags = input.split(',').filter(tag => tag.trim() !== '').map(tag => tag.trim())
     
     tagsEl.innerHTML = ''
